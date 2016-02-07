@@ -13,7 +13,7 @@ module Expd
     private
 
     def copy_to_clipboard(text)
-      IO.popen(expand_cmd, "w") { |p| p.write text } unless exp.empty?
+      IO.popen(clipboard_cmd, "w") { |p| p.write text } unless text.empty?
     end
 
     def clipboard_cmd
