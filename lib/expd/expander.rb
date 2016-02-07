@@ -5,7 +5,7 @@ module Expd
     end
 
     def expand(name, opts = {})
-      exp = @snippets.fetch(name, "")
+      exp = @snippets.fetch(name, "").chomp
       copy_to_clipboard exp if opts[:copy] && !exp.empty?
       exp
     end
