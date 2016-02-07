@@ -1,0 +1,39 @@
+#! /usr/bin/env ruby
+
+require "expd"
+require "trollop"
+
+opts = Trollop.options do
+  version "expd #{Expd.version}"
+  banner <<-EOS
+Expd is a text snippet expander command-line tool.
+
+Usage:
+  expd [options] <snippet shortcut>
+where [options] are:
+EOS
+
+  opt :remove, "Remove a text snippet"
+  opt :delete, "Alias for --remove"
+  opt :add, "Add a text snippet from STDIN"
+  opt :copy, "Copy the expanded text in the clipboard", :default => true
+end
+
+opts[:remove] = true if opt[:delete]
+
+Trollop.die "Please provide a snippet shortcut" if ARGV.empty?
+
+conf = Expd::Config.defaults
+word = ARGV.first
+
+unless opts[:remove] || opts[:add]
+  exp = Exped::Expander.new conf.snippets
+  exp.expand word, :copy => opts[:copy]
+else
+  if opts[:remove]
+    conf.delete word
+  elsif opts[:add]
+    conf[:snippets][word] = STDIN.read
+  end
+  conf.save!
+end
