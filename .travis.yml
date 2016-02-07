@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 1.9.3
+  - 2.0.0
+  - 2.1.0
+  - 2.2.0
+  - 2.3.0
+  - ruby-head
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+sudo: false
