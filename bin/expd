@@ -30,9 +30,9 @@ unless opts[:remove] || opts[:add]
   puts s unless s.empty?
 else
   if opts[:remove]
-    conf.delete word
+    conf.snippets.delete word
   elsif opts[:add]
-    conf[:snippets][word] = STDIN.read
+    conf.snippets[word] = STDIN.read
   end
   conf.save!
 end
