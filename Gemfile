@@ -8,4 +8,5 @@ group :test do
   gem "simplecov", :require => false
   gem "inch", "~> 0.7", require: false
   gem "rake"
+  gem "test-unit"
 end
