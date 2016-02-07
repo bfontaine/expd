@@ -1,6 +1,6 @@
 # Expd
 
-[![Build Status](https://img.shields.io/travis/bfontaine/expd.svg)](https://travis-ci.org/bfontaine/expd)
+[![Build Status](https://travis-ci.org/bfontaine/expd.svg?branch=master)](https://travis-ci.org/bfontaine/expd)
 [![Gem Version](https://img.shields.io/gem/v/expd.svg)](http://badge.fury.io/rb/expd)
 [![Inline docs](http://inch-ci.org/github/bfontaine/expd.svg?branch=master)](http://inch-ci.org/github/bfontaine/expd)
 
