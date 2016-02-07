@@ -1,7 +1,7 @@
 # Expd
 
 [![Build Status](https://img.shields.io/travis/bfontaine/expd.svg)](https://travis-ci.org/bfontaine/expd)
-[![Gem Version](https://img.shields.io/gem/v/expd.png)](http://badge.fury.io/rb/expd)
+[![Gem Version](https://img.shields.io/gem/v/expd.svg)](http://badge.fury.io/rb/expd)
 
 **Expd** is a command-line text expander tool.
 
