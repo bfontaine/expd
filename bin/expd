@@ -26,7 +26,8 @@ word = ARGV.first
 
 unless opts[:remove] || opts[:add]
   exp = Expd::Expander.new conf.snippets
-  exp.expand word, :copy => opts[:copy]
+  s = exp.expand word, :copy => opts[:copy]
+  puts s.chomp unless s.empty?
 else
   if opts[:remove]
     conf.delete word
