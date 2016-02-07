@@ -1,3 +1,3 @@
 require "expd/config"
-require "expd/replacer"
+require "expd/expander"
 require "expd/version"
