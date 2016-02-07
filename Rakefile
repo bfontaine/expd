@@ -11,5 +11,5 @@ task :doctest do
 end
 
 task :build do
-  system "gem", "build", "./ud.gemspec"
+  system "gem", "build", "./expd.gemspec"
 end

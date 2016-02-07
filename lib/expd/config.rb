@@ -1,3 +1,4 @@
+require "forwardable"
 require "yaml"
 
 module Expd

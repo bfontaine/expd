@@ -6,20 +6,18 @@ require "trollop"
 opts = Trollop.options do
   version "expd #{Expd.version}"
   banner <<-EOS
-Expd is a text snippet expander command-line tool.
+Expd is a command-line text snippet expander.
 
 Usage:
   expd [options] <snippet shortcut>
-where [options] are:
+
+Where [options] are:
 EOS
 
-  opt :remove, "Remove a text snippet"
-  opt :delete, "Alias for --remove"
   opt :add, "Add a text snippet from STDIN"
+  opt :remove, "Remove a text snippet"
   opt :copy, "Copy the expanded text in the clipboard", :default => true
 end
-
-opts[:remove] = true if opt[:delete]
 
 Trollop.die "Please provide a snippet shortcut" if ARGV.empty?
 
