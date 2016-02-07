@@ -1,4 +1,4 @@
-require "./lib/expd"
+require File.expand_path("../lib/expd/version", __FILE__)
 
 Gem::Specification.new do |s|
     s.name          = "expd"
