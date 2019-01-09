@@ -35,6 +35,6 @@ This is tested on Ruby 1.9.3+.
 ## Configuration
 
 Snippets are stored in a YAML file located at `~/.expd_snippets`. You can edit
-it youself if you need to. The snippets are stored in a hash under the
+it yourself if you need to. The snippets are stored in a hash under the
 `:snippets` key. Each key in the hash is a word and its value the expanded
 text.
